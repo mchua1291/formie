@@ -10,6 +10,3 @@ function onResize(event) {
 	// Whenever the window is resized, recenter the path:
 	path.position = view.center;
 }
-
-Document.querySelector('h1').innerHTML = 'more poop';
-console.log('poop');
