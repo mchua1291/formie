@@ -17,6 +17,5 @@
   },
   "homepage": "https://github.com/mchua1291/formie#readme",
   "dependencies": {
-    "chart.js": "^2.1.6"
   }
 }
