@@ -10,15 +10,20 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
        
         <!-- CSS -->
-        <link href="../public/main.css" rel="stylesheet"> 
+        <link href="" rel="stylesheet"> 
 
     </head>
     <body>
-        
+        <h1>Build Yo Formie Homie</h1>
+        <canvas id="myCanvas" resize></canvas>
+
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <script src="./js/module.js"></script>
+        <!-- Load the Paper.js library -->
+        <script type="text/javascript" src="paper/dist/paper-full.js"></script>
+        <!-- Load custom code -->
+        <script type="text/paperscript" src="js/formie.js" canvas="myCanvas"></script>
    </body>
 </html>
