@@ -1,5 +1,36 @@
+* { margin: 0; padding: 0; }                /* to remove the top and left whitespace */
+html, body { width: 100%; height: 100%; }   /* just to be sure these are full screen */
+canvas { display: block; }                 /* to remove the scrollbars */
+
+canvas {
+    background: #333;
+}
+
+canvas[resize] {
+	width: 100%;
+	height: 100%;
+}
+
 body {
     background: #333;
     color: #fff;
+    heiht: 100%;
     font: 300 100.1% "Helvetica Neue", Helvetica, "Arial Unicode MS", Arial, sans-serif;
+}
+
+.navbar-brand {
+    position: absolute;
+    width: 100%;
+    left: 10px;
+    text-align: left;
+    margin:0 auto;
+}
+.centerButtons {
+	display: flex; 
+	justify-content: center;
+} 
+
+.btn {
+	margin-top: 7px;
+	margin-left: 5px;
 }

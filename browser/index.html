@@ -4,18 +4,35 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Formie - A choreographer's best friend</title>
+        <title>Formie - A Staging Tool</title>
         
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-       
+        <!-- Font-Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
         <!-- CSS -->
         <link href="main.css" rel="stylesheet"> 
 
     </head>
     <body>
-        <h1>Build Yo Formie Homie</h1>
-        <canvas id="myCanvas" resize></canvas>
+        <!-- Navbar -->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">Formie</a>
+            </div>
+            <div class="centerButtons">
+              <ul class="nav navbar-nav">
+                <li><button type="button" class="btn btn-info pull-right" onclick="changeState('add')">Add</button></li>
+                <li><button type="button" class="btn btn-success pull-right" onclick="changeState('new')">New</button></li>
+                <li><button type="button" class="btn btn-danger pull-right" onclick="changeState('undo')">Undo</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Canvas -->
+        <canvas id="myCanvas" resize="true"></canvas>
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -25,5 +42,7 @@
         <script type="text/javascript" src="paper/dist/paper-full.js"></script>
         <!-- Load custom code -->
         <script type="text/paperscript" src="js/formie.js" canvas="myCanvas"></script>
+        <script type="text/javascript" src="js/navbar.js"></script>
+
    </body>
 </html>
