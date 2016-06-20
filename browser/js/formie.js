@@ -4,6 +4,9 @@
 
 var formations = [];
 var group = new Group();
+window.mode = 'add';
+
+window.changeState = function(state) { window.mode = state; }
 
 function addPerformer(position) {
     var newPerformer = new Path.Circle(position, 20);
