@@ -9,28 +9,28 @@ window.mode = 'add';
 window.changeState = function(state) { window.mode = state; }
 
 function addPerformer(position) {
-    var newPerformer = new Path.Circle(position, 20);
-    newPerformer.fillColor = 'yellow';
-    group.addChild(newPerformer);
+	var newPerformer = new Path.Circle(position, 20);
+	newPerformer.fillColor = 'yellow';
+	group.addChild(newPerformer);
 }
 
 function removePerformer(group) {
-    group.removeChildren();
+	group.removeChildren();
 }
 
 function onMouseUp(event) {
-    if(window.mode === 'add') {
-        var performer = addPerformer(event.point);
+	if(window.mode === 'add') {
+		var performer = addPerformer(event.point);
     }
-    if(window.mode === 'new') {
-        formations.push(group);
-        removePerformer(group);
-        group =  new Group();
-        window.mode = 'add';
-    }
-    if(window.mode === 'undo') {
-        removePerformer(group);
-    }
+	if(window.mode === 'new') {
+		formations.push(group);
+		removePerformer(group);
+		group =  new Group();
+		window.mode = 'add';
+	}
+	if(window.mode === 'undo') {
+		removePerformer(group);
+	}
 }
 
 // intersection finder method
@@ -54,18 +54,16 @@ function onFrame(event) {}
 // Grid lines span only the current viewport
 //==============================================================================
 function drawGrid (cellSize) {
-    
-    this.cellSize = cellSize;
-    this.gridColor = '#D0D0D0';
-    this.gridGroup;
-    
-    var self = this;
 
-    var boundingRect = view.bounds;
-    var num_rectangles_wide = view.bounds.width / this.cellSize;
-    var num_rectangles_tall = view.bounds.height / this.cellSize;
+	this.cellSize = cellSize;
+	this.gridColor = '#D0D0D0';
+	this.gridGroup;
 
-    
+	var self = this;
+	var boundingRect = view.bounds;
+	var num_rectangles_wide = view.bounds.width / this.cellSize;
+	var num_rectangles_tall = view.bounds.height / this.cellSize;
+
     this.createGrid = function() {
         
         gridGroup = new Group();
